@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--SweerAlerts alertas personalizadas-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Primer Challenge</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logoimg" src="img/logo.png" alt="Logo Alura">
+        </div>
+        <h1 class="title">Encriptador de Mensajes</h1>
+    </header>
+
+    <main class="container">
+        <!--Parte Izquierda-->
+        <section class="left">
+            <textarea class="text-input" id="input-text" placeholder="Ingrese su texto aquí..." autofocus oninput="this.value = this.value.replace(/[^a-z-0-9\s]/,'')"></textarea>
+            <p><img src="img/warning.svg" alt="Warning"><b> Solo letras minúsculas y sin acentos</b></p>
+            <div class="left-button">
+                <button type="button" id="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button type="button" id="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <!--Parte Derecha-->
+        <section class="right">
+            <img class="imgRight" id="imgDer" src="img/munieco.png" alt="Muñeco">
+            <h1 id="txt">Ningún mensaje fue encontrado</h1>
+            <textarea id="output" readonly>Ingrese el texto que desees encriptar o desencriptar</textarea>
+            <div class="right-button">
+                <button type="button" id="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2022 | Website designed by Pablo Rilh</p>
+    </footer>
+    
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
